@@ -1,12 +1,12 @@
 <?php
 
 /* Informações da sua conta */
-$config['Boleto']["agencia"] = "3428"; // Num da agencia, sem digito
-$config['Boleto']["conta"] = "3319"; 	// Num da conta, sem digito
+$config['Boleto']["agencia"] = "9999"; // Num da agencia, sem digito
+$config['Boleto']["conta"] = "9999"; 	// Num da conta, sem digito
 
 /* Dados do contrato com o Banco */
-$config['Boleto']["convenio"] = "2022524";  // Num do convênio - REGRA: 6 ou 7 ou 8 dígitos
-$config['Boleto']["contrato"] = "2022524"; // Num do seu contrato
+$config['Boleto']["convenio"] = "2222222";  // Num do convênio - REGRA: 6 ou 7 ou 8 dígitos
+$config['Boleto']["contrato"] = "2222222"; // Num do seu contrato
 $config['Boleto']["carteira"] = "18";
 $config['Boleto']["variacao_carteira"] = "-019";  // Variação da Carteira, com traço (opcional)
 
@@ -15,11 +15,11 @@ $config['Boleto']["formatacao_convenio"] = "7"; // REGRA: 8 p/ Convênio c/ 8 d�
 $config['Boleto']["formatacao_nosso_numero"] = "2"; // REGRA: Usado apenas p/ Convênio c/ 6 dígitos: informe 1 se for NossoN�mero de at� 5 dígitos ou 2 para opção de até 17 dígitos
 
 /* Seus Dados */
-$config['Boleto']["identificacao"] = "Oxford Porcelanas";
-$config['Boleto']["cpf_cnpj"] = "86.046.463/0001-00";
-$config['Boleto']["endereco"] = "Rua Jorge Diener, 88";
-$config['Boleto']["cidade_uf"] = "São Bento do Sul / SC";
-$config['Boleto']["cedente"] = "Oxford S/A Indústria e Comércio";
+$config['Boleto']["identificacao"] = "CakePHP Boletos";
+$config['Boleto']["cpf_cnpj"] = "00.000.000/0001-00";
+$config['Boleto']["endereco"] = "Rua de teste, 88";
+$config['Boleto']["cidade_uf"] = "São Paulo / SP";
+$config['Boleto']["cedente"] = "Minha Empresa Ltda.";
 
 /* Vence em quantos dias? */
 $config['Boleto']['dias_vencimento'] = 5;
@@ -28,8 +28,8 @@ $config['Boleto']['dias_vencimento'] = 5;
 $config['Boleto']['taxa'] = 0;
 
 /* Informações para o cliente*/
-$config['Boleto']["demonstrativo1"] = "Pagamento de Compra na Loja OxfordPorcelanas.com.br";
-$config['Boleto']["demonstrativo2"] = "<br />";
+$config['Boleto']["demonstrativo1"] = "Pagamento dos produtos comprados no<br />";
+$config['Boleto']["demonstrativo2"] = "CakePHP Boletos.<br />";
 $config['Boleto']["demonstrativo3"] = "";
 
 /* Instruções ao caixa*/
@@ -38,8 +38,11 @@ $config['Boleto']["instrucoes2"] = " Não receber após o vencimento.";
 $config['Boleto']["instrucoes3"] = "";
 $config['Boleto']["instrucoes4"] = "";
 
+/* OPCIONAIS */
 $config['Boleto']["quantidade"] = "";
 $config['Boleto']["valor_unitario"] = "";
+
+/* MOEDA */
 $config['Boleto']["aceite"] = "N";
 $config['Boleto']["especie"] = "R$";
 $config['Boleto']["especie_doc"] = "DM";
