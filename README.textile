@@ -8,37 +8,37 @@ h1. Bancos
 
 Atualmente o Plugin tem suporte apenas ao Banco do Brasil.
 
-h1. InstalaÁ„o
+h1. Instala√ß√£o
 
 Coloque os arquivos em app/plugin/boletos.
 
-h2. Arquivo de ConfiguraÁ„o
+h2. Arquivo de Configura√ß√£o
 
-O Plugin tenta localizar as configuraÁıes no arquivo boleto_bb.php que fica dentro da pasta config, se ele n„o achar na pasta do config ele vai carregar o que est· dentro do config do plugin.
+O Plugin tenta localizar as configura√ß√µes no arquivo boleto_bb.php que fica dentro da pasta config, se ele n√£o achar na pasta do config ele vai carregar o que est√° dentro do config do plugin.
 
-*Conte˙do do arquivo:*
+*Conte√∫do do arquivo:*
 <pre>
 <?php
 
-/* InformaÁıes da sua conta */
+/* Informa√ß√µes da sua conta */
 $config['Boleto']["agencia"] = "9999"; // Num da agencia, sem digito
 $config['Boleto']["conta"] = "9999"; 	// Num da conta, sem digito
 
 /* Dados do contrato com o Banco */
-$config['Boleto']["convenio"] = "2222222";  // Num do convÍnio - REGRA: 6 ou 7 ou 8 dÌgitos
+$config['Boleto']["convenio"] = "2222222";  // Num do conv√™nio - REGRA: 6 ou 7 ou 8 d√≠gitos
 $config['Boleto']["contrato"] = "2222222"; // Num do seu contrato
 $config['Boleto']["carteira"] = "18";
-$config['Boleto']["variacao_carteira"] = "-019";  // VariaÁ„o da Carteira, com traÁo (opcional)
+$config['Boleto']["variacao_carteira"] = "-019";  // Varia√ß√£o da Carteira, com tra√ßo (opcional)
 
 /* Tipo do Boleto */
-$config['Boleto']["formatacao_convenio"] = "7"; // REGRA: 8 p/ ConvÍnio c/ 8 dÌgitos, 7 p/ ConvÍnio c/ 7 dÌgitos, ou 6 se ConvÍnio c/ 6 dÌgitos
-$config['Boleto']["formatacao_nosso_numero"] = "2"; // REGRA: Usado apenas p/ ConvÍnio c/ 6 dÌgitos: informe 1 se for NossoN˙mero de atÈ 5 dÌgitos ou 2 para opÁ„o de atÈ 17 dÌgitos
+$config['Boleto']["formatacao_convenio"] = "7"; // REGRA: 8 p/ Conv√™nio c/ 8 d√≠gitos, 7 p/ Conv√™nio c/ 7 d√≠gitos, ou 6 se Conv√™nio c/ 6 d√≠gitos
+$config['Boleto']["formatacao_nosso_numero"] = "2"; // REGRA: Usado apenas p/ Conv√™nio c/ 6 d√≠gitos: informe 1 se for NossoN√∫mero de at√© 5 d√≠gitos ou 2 para op√ß√£o de at√© 17 d√≠gitos
 
 /* Seus Dados */
 $config['Boleto']["identificacao"] = "CakePHP Boletos";
 $config['Boleto']["cpf_cnpj"] = "00.000.000/0001-00";
 $config['Boleto']["endereco"] = "Rua de teste, 88";
-$config['Boleto']["cidade_uf"] = "S„o Paulo / SP";
+$config['Boleto']["cidade_uf"] = "S√£o Paulo / SP";
 $config['Boleto']["cedente"] = "Minha Empresa Ltda.";
 
 /* Vence em quantos dias? */
@@ -47,14 +47,14 @@ $config['Boleto']['dias_vencimento'] = 5;
 /* Taxa do boleto */
 $config['Boleto']['taxa'] = 0;
 
-/* InformaÁıes para o cliente*/
+/* Informa√ß√µes para o cliente*/
 $config['Boleto']["demonstrativo1"] = "Pagamento dos produtos comprados no<br />";
 $config['Boleto']["demonstrativo2"] = "CakePHP Boletos.<br />";
 $config['Boleto']["demonstrativo3"] = "";
 
-/* InstruÁıes ao caixa*/
+/* Instru√ß√µes ao caixa*/
 $config['Boleto']["instrucoes1"] = " Sr. Caixa,";
-$config['Boleto']["instrucoes2"] = " N„o receber apÛs o vencimento.";
+$config['Boleto']["instrucoes2"] = " N√£o receber ap√≥s o vencimento.";
 $config['Boleto']["instrucoes3"] = "";
 $config['Boleto']["instrucoes4"] = "";
 
@@ -78,7 +78,7 @@ Dentro do controller carregue o component:
 var $components = array('Boletos.BoletoBb');
 </pre>
 
-MetÛdo de exemplo para renderizar o boleto:
+Met√≥do de exemplo para renderizar o boleto:
 
 <pre>
 function index(){
@@ -88,13 +88,13 @@ function index(){
 			'endereco1' => 'Rua do funal de tal, 88',
 			'endereco2' => 'Curitiba/PR',
 			'valor_cobrado' => 100.56,
-			'pedido' => 5 // Usado para gerar o n˙mero do documento e o nosso n˙mero.
+			'pedido' => 5 // Usado para gerar o n√∫mero do documento e o nosso n√∫mero.
 		);
 		$this->BoletoBb->render($dados);
 	}
 </pre>
 
 Pronto. 
-O Boleto j· est· instalado e pronto para ser usado.
+O Boleto j√° est√° instalado e pronto para ser usado.
 
 
