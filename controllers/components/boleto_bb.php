@@ -29,7 +29,7 @@ class BoletoBbComponent extends Object{
 			$this->setup($options);
 		}
 		$dadosboleto = $this->options;
-		require_once App::pluginPath('boleto'). DS . 'vendors' . DS . 'boletophp' . DS . 'boleto_bb.php';
+		require_once App::pluginPath('boletos') . 'vendors' . DS . 'boletophp' . DS . 'boleto_bb.php';
 	}
 
 	//function beforeRender(&$controller){}

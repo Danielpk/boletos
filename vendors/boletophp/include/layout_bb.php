@@ -32,7 +32,7 @@
 	<head>
 		<title><?php echo $dadosboleto["identificacao"]; ?></title>
 		<meta http-equiv=Content-Type content=text/html charset=utf8>
-		<base href="<?php echo Router::url('/boleto/', true); ?>" />
+		<base href="<?php echo Router::url('/boletos/', true); ?>" />
 		<style type="text/css">
 				<!--
 				.ti {font: 9px Arial, Helvetica, sans-serif}
@@ -79,8 +79,6 @@
 					/* *** CABECALHO *** */
 
 					#instr_header {
-						background: url('../img/logo_oxford_boleto.jpg') no-repeat top left;
-						padding-left: 110px;
 						height: 65px;
 					}
 

@@ -32,7 +32,7 @@
 
 /* Tenta carregar o config do Boleto_bb na pasta da APP */
 if(!Configure::load('boleto_bb')){
-	Configure::load('Boleto.boleto_bb');
+	Configure::load('Boletos.boleto_bb');
 }
 
 
