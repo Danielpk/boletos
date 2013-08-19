@@ -1,6 +1,6 @@
 <?php
 // +----------------------------------------------------------------------+
-// | BoletoPhp - Vers�o Beta                                              |
+// | BoletoPhp - Versão Beta                                              |
 // +----------------------------------------------------------------------+
 // | Este arquivo est� dispon�vel sob a Licen�a GPL dispon�vel pela Web   |
 // | em http://pt.wikipedia.org/wiki/GNU_General_Public_License           |
@@ -31,8 +31,8 @@
 // Os valores abaixo podem ser colocados manualmente ou ajustados p/ formul�rio c/ POST, GET ou de BD (MySql,Postgre,etc)	//
 
 /* Tenta carregar o config do Boleto_bb na pasta da APP */
-if(!Configure::load('boleto_bb')){
-	Configure::load('Boletos.boleto_bb');
+if(!Configure::load('Boletos.boleto_bb')){
+	Configure::load('Boletos.BoletoBb');
 }
 
 
@@ -53,18 +53,18 @@ $dadosboleto["numero_documento"] = $dadosboleto['nosso_numero'];	// Num do pedid
 $dadosboleto["data_vencimento"] = $data_venc; // Data de Vencimento do Boleto - REGRA: Formato DD/MM/AAAA
 $dadosboleto["data_documento"] = date("d/m/Y"); // Data de emiss�o do Boleto
 $dadosboleto["data_processamento"] = date("d/m/Y"); // Data de processamento do boleto (opcional)
-$dadosboleto["valor_boleto"] = $valor_boleto; 	// Valor do Boleto - REGRA: Com v�rgula e sempre com duas casas depois da virgula
+$dadosboleto["valor_boleto"] = $valor_boleto; 	// Valor do Boleto - REGRA: Com virgula e sempre com duas casas depois da virgula
 
 // DADOS DO SEU CLIENTE
 //$dadosboleto["sacado"] = "Nome do seu Cliente";
-//$dadosboleto["endereco1"] = "Endere�o do seu Cliente";
+//$dadosboleto["endereco1"] = "Endereço do seu Cliente";
 //$dadosboleto["endereco2"] = "Cidade - Estado -  CEP: 00000-000";
 
 
-// ---------------------- DADOS FIXOS DE CONFIGURA��O DO SEU BOLETO --------------- //
+// ---------------------- DADOS FIXOS DE CONFIGURAÇÃO DO SEU BOLETO --------------- //
 
 
-// N�O ALTERAR!
+// NÃO ALTERAR!
 include("include/funcoes_bb.php"); 
 include("include/layout_bb.php");
 ?>

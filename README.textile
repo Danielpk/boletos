@@ -1,20 +1,18 @@
 h1. Plugin Boletos CakePHP
 
-Plugin que integra o projeto BoletoPHP com o CakePHP.
-
-O Plugin precisa de algumas "melhorias" que vou estar fazendo em breve.
+Plugin que integra o projeto BoletoPHP com o CakePHP 2.X.
 
 h1. Bancos
 
-Atualmente o Plugin tem suporte apenas ao Banco do Brasil.
+Atualmente o Plugin tem suporte ao Banco do Brasil e a Caixa.
 
 h1. Instalação
 
-Coloque os arquivos em app/plugin/boletos.
+Coloque os arquivos em app/plugin/Boletos.
 
 h2. Arquivo de Configuração
 
-O Plugin tenta localizar as configurações no arquivo boleto_bb.php que fica dentro da pasta config, se ele não achar na pasta do config ele vai carregar o que está dentro do config do plugin.
+O Plugin tenta localizar as configurações no arquivo boleto_bb.php ou boleto_cef_sigcb.php que ficam dentro da pasta config, se ele não achar na pasta do config ele vai carregar o que está dentro do config do plugin.
 
 *Conteúdo do arquivo:*
 <pre>
@@ -96,5 +94,3 @@ function index(){
 
 Pronto. 
 O Boleto já está instalado e pronto para ser usado.
-
-
