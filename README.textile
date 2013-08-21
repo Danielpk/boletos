@@ -4,7 +4,7 @@ Plugin que integra o projeto BoletoPHP com o CakePHP 2.X.
 
 h1. Bancos
 
-Atualmente o Plugin tem suporte ao Banco do Brasil e a Caixa.
+Atualmente o Plugin tem suporte ao Banco do Brasil, Caixa e Itaú.
 
 h1. Instalação
 
@@ -12,7 +12,7 @@ Coloque os arquivos em app/plugin/Boletos.
 
 h2. Arquivo de Configuração
 
-O Plugin tenta localizar as configurações no arquivo boleto_bb.php ou boleto_cef_sigcb.php que ficam dentro da pasta config, se ele não achar na pasta do config ele vai carregar o que está dentro do config do plugin.
+O Plugin tenta localizar as configurações no arquivo boleto_bb.php, boleto_cef_sigcb.php ou boleto_itau.php que ficam dentro da pasta config, se ele não achar na pasta do config ele vai carregar o que está dentro do config do plugin.
 
 *Conteúdo do arquivo:*
 <pre>
