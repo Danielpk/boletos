@@ -1,21 +1,3 @@
-h1. Plugin Boletos CakePHP
-
-Plugin que integra o projeto BoletoPHP com o CakePHP 2.X.
-
-h1. Bancos
-
-Atualmente o Plugin tem suporte ao Banco do Brasil, Caixa e Itaú.
-
-h1. Instalação
-
-Coloque os arquivos em app/plugin/Boletos.
-
-h2. Arquivo de Configuração
-
-O Plugin tenta localizar as configurações no arquivo boleto_bb.php, boleto_cef_sigcb.php ou boleto_itau.php que ficam dentro da pasta config, se ele não achar na pasta do config ele vai carregar o que está dentro do config do plugin.
-
-*Conteúdo do arquivo:*
-<pre>
 <?php
 
 /* Informações da sua conta */
@@ -30,7 +12,7 @@ $config['Boleto']["variacao_carteira"] = "-019";  // Variação da Carteira, com
 
 /* Tipo do Boleto */
 $config['Boleto']["formatacao_convenio"] = "7"; // REGRA: 8 p/ Convênio c/ 8 dígitos, 7 p/ Convênio c/ 7 dígitos, ou 6 se Convênio c/ 6 dígitos
-$config['Boleto']["formatacao_nosso_numero"] = "2"; // REGRA: Usado apenas p/ Convênio c/ 6 dígitos: informe 1 se for NossoNúmero de até 5 dígitos ou 2 para opção de até 17 dígitos
+$config['Boleto']["formatacao_nosso_numero"] = "2"; // REGRA: Usado apenas p/ Convênio c/ 6 dígitos: informe 1 se for NossoN�mero de at� 5 dígitos ou 2 para opção de até 17 dígitos
 
 /* Seus Dados */
 $config['Boleto']["identificacao"] = "CakePHP Boletos";
@@ -66,31 +48,3 @@ $config['Boleto']["especie"] = "R$";
 $config['Boleto']["especie_doc"] = "DM";
 
 ?>
-</pre>
-
-h2. Carregando o Component
-
-Dentro do controller carregue o component:
-
-<pre>
-var $components = array('Boletos.BoletoBb');
-</pre>
-
-Metódo de exemplo para renderizar o boleto:
-
-<pre>
-function index(){
-		$this->autoRender = false;
-		$dados = array(
-			'sacado' => 'Fulano de Tal',
-			'endereco1' => 'Rua do funal de tal, 88',
-			'endereco2' => 'Curitiba/PR',
-			'valor_cobrado' => 100.56,
-			'pedido' => 5 // Usado para gerar o número do documento e o nosso número.
-		);
-		$this->BoletoBb->render($dados);
-	}
-</pre>
-
-Pronto. 
-O Boleto já está instalado e pronto para ser usado.
