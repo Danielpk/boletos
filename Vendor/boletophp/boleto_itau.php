@@ -34,6 +34,8 @@ if(!Configure::load('Boletos.boleto_itau')){
 	Configure::load('Boletos.boleto_itau');
 }
 
+$dadosboleto = Set::merge($dadosboleto, Configure::read('Boleto'));
+
 // DADOS DO BOLETO PARA O SEU CLIENTE
 $dias_de_prazo_para_pagamento = 5;
 $taxa_boleto = 2.95;
