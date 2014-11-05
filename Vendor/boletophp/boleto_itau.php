@@ -30,6 +30,10 @@
 // ------------------------- DADOS DIN?MICOS DO SEU CLIENTE PARA A GERA??O DO BOLETO (FIXO OU VIA GET) -------------------- //
 // Os valores abaixo podem ser colocados manualmente ou ajustados p/ formul?rio c/ POST, GET ou de BD (MySql,Postgre,etc)	//
 
+if(!Configure::load('Boletos.boleto_itau')){
+	Configure::load('Boletos.boleto_itau');
+}
+
 // DADOS DO BOLETO PARA O SEU CLIENTE
 $dias_de_prazo_para_pagamento = 5;
 $taxa_boleto = 2.95;
