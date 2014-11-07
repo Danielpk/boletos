@@ -4,7 +4,7 @@ Plugin que integra o projeto BoletoPHP com o CakePHP 2.X.
 
 h1. Bancos
 
-Atualmente o Plugin tem suporte ao Banco do Brasil, Caixa, Itaú e Santander.
+Atualmente o Plugin tem suporte ao Banco do Brasil, Caixa, Itaú, Santander e Bradesco.
 
 h1. Instalação
 
